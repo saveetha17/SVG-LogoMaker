@@ -3,8 +3,8 @@ class Shape {
     this.color = "";
   }
 
-  setColor(){
-    this.color=color;
+  setColor(color){
+    this.color = color;
   }
 }
 
