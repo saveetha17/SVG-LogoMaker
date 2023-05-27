@@ -20,4 +20,10 @@ class Square extends Shape {
     }
 }
 
-module.exports = Shape;
+class Circle extends Shape{
+    render() {
+        return `<circle cx="50" cy="50" r="40" fill="${this.color}" />`
+    }
+}
+
+module.exports = {Circle,Triangle,Square};
