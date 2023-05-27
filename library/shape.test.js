@@ -1,3 +1,5 @@
+const {Circle, Triangle, Square} = require('./shape');
+
 describe("Triangle", () => {
     test("should render svg for a blue polygon element", () => {
       const expected =
