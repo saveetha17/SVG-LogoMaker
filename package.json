@@ -1,0 +1,26 @@
+{
+  "name": "svg-logomaker",
+  "version": "1.0.0",
+  "description": "Challenge-10",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saveetha17/SVG-LogoMaker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saveetha17/SVG-LogoMaker/issues"
+  },
+  "homepage": "https://github.com/saveetha17/SVG-LogoMaker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
