@@ -15,7 +15,7 @@ describe("Triangle", () => {
       const triangle = new Triangle();
       triangle.setColor("blue");
       const actual = triangle.render();
-      expect(actualSvg).toEqual(expectedSvg);
+      expect(actual).toEqual(expected);
     });
   });
   
