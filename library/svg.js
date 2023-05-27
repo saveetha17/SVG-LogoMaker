@@ -13,6 +13,11 @@ class SVG {
         }
         this.text = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${msg}</text>`;
       }
+
+      setShape(shape) {
+        this.shapeElement = shape.render();
+      }
+    
     
 }
 
