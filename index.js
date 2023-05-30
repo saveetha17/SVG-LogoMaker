@@ -1,9 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const shape = require("./library/shape");
-const svg = require("./library/svg");
-const { writeFile } = require('fs/promises');
+const {Circle,Triangle,Square} = require("./library/shape");
+const SVG = require("./library/svg");
 
 // TODO: Create an array of questions for user input
 
@@ -11,43 +10,65 @@ const questions = [
   {
     type: "input",
     name: "text",
-    message: "Please enter the 3 letter text",
+    message: "Please enter the 1-3 letters for svg text",
+    validate: (text) => {
+      if(text.length >3){
+        return false;
+      }else
+        {
+          return true;
+        }
+    
+    }
   },
   {
-    type: "input",
-    name: "text-color",
+    type: "list",
+    name: "textColor",
     message: "Please enter the text-color",
+    choices: ["red", "green", "blue","white"],
   },
 
   {
-    type: "List",
+    type: "list",
     name: "shape",
     message: "Please choose the shape",
-    choices:["Circle", "Square","Triangle"],
+    choices: ["Circle", "Square", "Triangle"],
   },
-  
+
   {
-    type: "input",
-    name: "shape-color",
+    type: "list",
+    name: "shapeColor",
     message: "Please choose the color of the shape",
+    choices: ["red", "green", "blue"],
   },
-      
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log("Successfully created readme.md!")
-  );
-}
+inquirer.prompt(questions).then((response) => {
+  var myObj;
+  switch (response.shape) {
+    case "Circle":
+     myObj = new Circle();
+     myObj.setColor(response.shapeColor);
 
-// TODO: Create a function to initialize app
-function init() {
-  inquirer.prompt(questions).then((answers) => {
-    const readMePageContent = generateMarkdown(answers);
+      break;
 
-    writeToFile("readme.md", readMePageContent);
-  });
-}
+    case "Square":
+      myObj = new Square();
+      myObj.setColor(response.shapeColor);
 
-init();
+      break;
+
+    case "Triangle":
+      myObj = new Triangle();
+      myObj.setColor(response.shapeColor);
+      break;
+
+  }
+  const newSVG = new SVG();
+  newSVG.setShape(myObj);
+  newSVG.setText(response.text, response.textColor);
+  fs.writeFileSync("logo.svg",newSVG.render(),function(err){
+    if(err) throw err;
+  })
+  
+});

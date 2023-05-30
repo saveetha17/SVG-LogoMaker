@@ -22,7 +22,7 @@ describe("Triangle", () => {
 describe("Square", () => {
     test("should render svg for a green rectangle element", () => {
       const expected =
-        '<rect x="80" y="50" width="105" height="105" fill="green" />';
+        '<rect x="50" y="50" width="200" height="200" fill="green" />';
       const square = new Square();
       square.setColor("green");
       const actual = square.render();
@@ -30,7 +30,7 @@ describe("Square", () => {
     });
     test("should accept a fillColor param", () => {
       const expected =
-        '<rect x="80" y="50" width="105" height="105" fill="green" />';
+        '<rect x="50" y="50" width="200" height="200" fill="green" />';
       const square = new Square();
       square.setColor("green");
       const actual = square.render();
@@ -41,7 +41,7 @@ describe("Square", () => {
   describe("Circle", () => {
     test("should render svg for a red circle element", () => {
       const expected =
-        '<circle cx="50" cy="50" r="40" fill="red" />';
+        '<circle cx="150" cy="150" r="100" fill="red" />';
       const circle = new Circle();
       circle.setColor("red");
       const actual = circle.render();
@@ -49,7 +49,7 @@ describe("Square", () => {
     });
     test("should accept a fillColor param", () => {
       const expected =
-        '<circle cx="50" cy="50" r="40" fill="red" />';
+        '<circle cx="150" cy="150" r="100" fill="red" />';
       const circle = new Circle();
       circle.setColor("red");
       const actual = circle.render();

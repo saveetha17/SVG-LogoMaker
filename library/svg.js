@@ -15,7 +15,9 @@ class SVG {
       }
 
       setShape(shape) {
-        this.shapeElement = shape.render();
+        this.shape = shape.render();
+
+        console.log(this.shape)
       }
     
     
