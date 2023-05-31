@@ -13,13 +13,16 @@ SVG-LogoMaker is a Node.js command-line application that takes in user input to 
 
 ## Usage
 
-   <img src="assets\images\screenshots\SS-SearchPage.png" alt="search page screen shot">
-   <img src="assets\images\screenshots\SS-ResultPage.png" alt="Result page screen shot">
+ ![ScreenShot](./Develop/library/assets/ScreenShot/ScreenShot.png)
 
 ## Link to Deployed Application
+
+https://saveetha17.github.io/SVG-LogoMaker/
 
 ## Link to Github Repository
 
 https://github.com/saveetha17/SVG-LogoMaker.git
 
 ## Link to Screencastify Video
+
+https://drive.google.com/file/d/1g6ss8xiQ874WijJ7ViJG4WZ2qPsXz-Dj/view
