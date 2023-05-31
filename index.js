@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const {Circle,Triangle,Square} = require("./library/shape");
-const SVG = require("./library/svg");
+const {Circle,Triangle,Square} = require("./Develop/library/shape");
+const SVG = require("./Develop/library/svg");
 
 // TODO: Create an array of questions for user input
 

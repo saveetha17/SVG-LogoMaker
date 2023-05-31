@@ -20,4 +20,6 @@ SVG-LogoMaker is a Node.js command-line application that takes in user input to 
 
 ## Link to Github Repository
 
+https://github.com/saveetha17/SVG-LogoMaker.git
+
 ## Link to Screencastify Video

@@ -31,29 +31,9 @@ describe("SVGTest", () => {
         const newshape = new Circle();
         newshape.setColor("red");
         newSVGTest.setShape(newshape);
-        const expected = `<circle cx="150" cy="150" r="100" fill="red" />`;
+        const expected = `<circle cx="150" cy="110" r="90" fill="red" />`;
         expect(newSVGTest.shape).toEqual(expected);
 
-
-        // //const newtext = new Circle();
-        // //const newshape = new Circle();
-        // //newtext.setColor("red");
-        // //newSVGTest.setShape(newshape);
-        // newSVGTest.setText("SVG","white");
-        // const actual = newSVGTest.setShape(Circle);
-        // const expected = `<circle cx="150" cy="150" r="100" fill="red" />`;
-        // expect(actual).toEqual(expected);
-
     });
-    //     newSVGTest = new SVG();
-    //     const newshape = new Circle();
-    //     newSVGTest.setColor("red");
-    //     newSVGTest.setText("SVG","white");
-    //     const actual = newSVGTest.setShape(newshape);
-    //     const expected = `<circle cx="150" cy="150" r="100" fill="red" />`;
-    //     expect(actual).toEqual(expected);
-    // });
-
-    
 
 });
