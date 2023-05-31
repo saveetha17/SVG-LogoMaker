@@ -5,7 +5,7 @@ class Shape {
 
   setColor(color){
     this.color = color;
-    console.log("shape color",color)
+    // console.log("shape color",color)
   }
 }
 
@@ -17,13 +17,13 @@ class Triangle extends Shape {
 
 class Square extends Shape {
     render() {
-        return `<rect x="50" y="50" width="200" height="200" fill="${this.color}" />`;
+        return `<rect x="50" y="42" width="200" height="200" fill="${this.color}" />`;
     }
 }
 
 class Circle extends Shape{
     render() {
-        return `<circle cx="150" cy="150" r="100" fill="${this.color}" />`
+        return `<circle cx="150" cy="110" r="90" fill="${this.color}" />`
     }
 }
 

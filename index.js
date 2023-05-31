@@ -12,9 +12,9 @@ const questions = [
     name: "text",
     message: "Please enter the 1-3 letters for svg text",
     validate: (text) => {
-      if(text.length >3){
-        return false;
-      }else
+      if(text.length > 3 && text.length < 1){
+        throw new Error('Please enter 1-3 characters:');
+      } else
         {
           return true;
         }
@@ -44,7 +44,7 @@ const questions = [
 ];
 
 inquirer.prompt(questions).then((response) => {
-  var myObj;
+  let myObj;
   switch (response.shape) {
     case "Circle":
      myObj = new Circle();
@@ -67,8 +67,6 @@ inquirer.prompt(questions).then((response) => {
   const newSVG = new SVG();
   newSVG.setShape(myObj);
   newSVG.setText(response.text, response.textColor);
-  fs.writeFileSync("logo.svg",newSVG.render(),function(err){
-    if(err) throw err;
-  })
-  
+  fs.writeFile("logo.svg",newSVG.render(),(err) =>
+  err ? console.log(err) : console.log("Generated logo.svg file"))
 });
